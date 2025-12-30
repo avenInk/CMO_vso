@@ -1,10 +1,90 @@
 :root{
-
-    --primary-color: #4CAF50;
-    --secondary-color: #ff9800;
+    --primary-color: #333;
     --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     --font-size: 16px;
-    --background-color: #f4f4f4;
-    --text-color: #333333;
+    --background-color: #272727;
+    --text-color: #dfdfdf;
+    --button-hover-color: #f11a90;
 
+}
+*{
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ }
+ 
+ *::selection{
+    background-color: var(--button-hover-color);
+    color: white;
+ }
+
+#login-page{
+    margin:0;
+    display: grid;
+    min-height: 100vh;
+    background-color: var(--background-color);
+    font-size: var(--font-size);
+    justify-content: center;
+}
+
+#menu-page{
+    background-color: var(--background-color);
+}
+
+
+button{
+    padding: 10px 20px;
+    background-color: var(--button-hover-color);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login{ 
+    height: 300px;
+    width: 440px;
+    display: grid;
+    place-items: center;
+    color: var(--text-color);
+    padding: 20px;
+    border-radius: 8px;
+    background-color: var(--primary-color);
+    svg{
+        width: 50px;
+        height: auto;
+        color: currentColor;
+    }
+    box-shadow: 0px 0px 9px 2px rgba(0, 0, 0, 0.2);
+}
+
+
+body section form{
+    display: grid;
+    select{
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 5px;
+        border: 0px;
+        font-size: 16px;
+    }
+}
+
+ header{
+    background-color: var(--primary-color);
+    padding: 10px 20px;
+    color: var(--text-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    h1{
+        font-size: 24px;
+    }
+ }  
+
+ul{
+    list-style: none;
 }
