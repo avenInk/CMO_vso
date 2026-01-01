@@ -1,4 +1,13 @@
 :root{
+    --primary-color: #f5f5f5;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-size: 16px;
+    --background-color: #ffffff;
+    --text-color: #080808;
+    --button-hover-color: #f11a90;
+
+}
+:root{
     --primary-color: #333;
     --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     --font-size: 16px;
@@ -7,6 +16,8 @@
     --button-hover-color: #f11a90;
 
 }
+
+
 *{
     padding: 0;
     box-sizing: border-box;
@@ -25,6 +36,7 @@
     background-color: var(--background-color);
     font-size: var(--font-size);
     justify-content: center;
+    align-items: center;
 }
 
 #menu-page{
@@ -33,18 +45,20 @@
 
 
 button{
+    max-width: 135px;
     padding: 10px 20px;
     background-color: var(--button-hover-color);
     border: none;
     border-radius: 5px;
-    color: white;
+    color: var(--text-color);
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin-bottom: 4px
 }
 
 .login{ 
-    height: 300px;
+    height: 350px;
     width: 440px;
     display: grid;
     place-items: center;
@@ -73,7 +87,7 @@ body section form{
 }
 
  header{
-    background-color: var(--primary-color);
+    
     padding: 10px 20px;
     color: var(--text-color);
     display: flex;
@@ -85,6 +99,21 @@ body section form{
     }
  }  
 
-ul{
+#station-list{
     list-style: none;
+    button{
+        background-color: var(--primary-color);
+    };
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+#station-list button:hover{
+    box-shadow: 0px 0px 0px 1px  var(--button-hover-color);
+}
+
+#sig-in-button{
+    display: none;
 }
