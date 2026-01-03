@@ -32,7 +32,8 @@
 #login-page{
     margin:0;
     display: grid;
-    min-height: 100vh;
+    height: 100vh;
+    width: 100vw;
     background-color: var(--background-color);
     font-size: var(--font-size);
     justify-content: center;
@@ -41,6 +42,10 @@
 
 #menu-page{
     background-color: var(--background-color);
+    margin: 0;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -115,5 +120,18 @@ body section form{
 }
 
 #sig-in-button{
-    display: none;
+    .display: none;
+}
+
+section form select{
+    background-color: var(--background-color);
+    color: var(--text-color)
+}
+.card-container {
+    width: 100%;       
+    flex-grow: 1;      
+    background-color: var(--button-hover-color);
+    margin: 0;
+    box-sizing: border-box;
+    overflow-y: auto; 
 }
