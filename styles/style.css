@@ -80,7 +80,7 @@ button{
 }
 
 
-body section form{
+body > section > form{
     display: grid;
     select{
         padding: 10px;
@@ -88,6 +88,12 @@ body section form{
         border-radius: 5px;
         border: 0px;
         font-size: 16px;
+        background-color: var(--background-color);
+        color: var(--text-color)
+
+    }
+    >button:hover{
+        background-color: #d13f8f;
     }
 }
 
@@ -120,13 +126,16 @@ body section form{
 }
 
 #sig-in-button{
-    .display: none;
+    pointer-events: none;
+    background-color: #f11a9085;
 }
 
-section form select{
-    background-color: var(--background-color);
-    color: var(--text-color)
+.active-login-button{
+    pointer-events: all !important;
+    background-color: var(--button-hover-color) !important;
+
 }
+
 .card-container {
     width: 100%;       
     flex-grow: 1;      
