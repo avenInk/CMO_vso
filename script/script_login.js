@@ -1,4 +1,19 @@
 
+async function activate_stations_buttons(){
+    const station_list = document.getElementById("station-list");
+
+    station_list.addEventListener("click", (event)=>{
+        event.target.disabled = true; // Deshabilitar el boton al hacer click
+
+        if(window.name_stations[event.target.id]){
+            console.log("Se ha oprimido el boton de la estacion:", window.name_stations[event.target.id]);
+        }
+
+        event.target.disabled = false; // Habilitar el boton nuevamente despues de procesar el click
+
+    })
+}
+
 async function login_page_disabled(){
     const login_page = document.getElementById("login-page");
     login_page.style.display = "none";
@@ -7,6 +22,7 @@ async function login_page_disabled(){
 async function menu_page_enabled(){
     const menu_page = document.getElementById("menu-page");
     menu_page.style.display = "block";
+    activate_stations_buttons();
 }
 
 async function get_work_directory() {
