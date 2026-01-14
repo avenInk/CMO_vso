@@ -7,18 +7,19 @@
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
     <script src="./script/script_login.js" defer></script>
+    <script src="./env/stations.js" defer></script>
 </head>
 <body>
   
 
-    <body id="login-page">
+    <div id="login-page">
 
         <section class="login">
 
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-alert-triangle"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 9v4" /><path d="M10.363 3.591l-8.106 13.534a1.914 1.914 0 0 0 1.636 2.871h16.214a1.914 1.914 0 0 0 1.636 -2.87l-8.106 -13.536a1.914 1.914 0 0 0 -3.274 0z" /><path d="M12 16h.01" /></svg>
 
             <h1>INCIDENCIAS CMO</h1>
-            <form role="log">
+            <form role="log" id="login-form">
                 <select name="operator" id="operator" required>
                     <option value="" disabled selected hidden>Operador</option>
                     <option value="OP01">OP01</option>
@@ -77,14 +78,50 @@
                     Carpeta de trabajo
                 </button>
 
-               <button type="login"  id="sig-in-button">Iniciar Sesión</button>
+               <button type="submit"  id="sig-in-button">Iniciar Sesión</button>
                 
 
 
             </form>
         </section>
         
-    </body>
+    </div>
+
+    <div id="menu-page" style="display: none;">
+
+
+        <header>
+            <section>
+                <h3 id="operator-id">Operador: </h3>
+                <details>
+                    <summary>Estaciones</summary>
+                    <ul id="station-list">
+                        <li><button id="E1">E1</button></li>
+                        <li><button id="E2">E2</button></li>
+                        <li><button id="E3">E3</button></li>
+                        <li><button id="E4">E4</button></li>
+                        <li><button id="E5">E5</button></li>
+                        <li><button id="E6">E6</button></li>
+                        <li><button id="E7">E7</button></li>
+                        <li><button id="E8">E8</button></li>
+                        <li><button id="E9">E9</button></li>
+                        <li><button id="E10">E10</button></li>
+                        <li><button id="E11">E11</button></li>
+                        <li><button id="E12">E12</button></li>
+                    </ul>
+                </details>
+            </section>
+
+        </header>
+
+
+        <section class="card-container">
+
+
+        </section>
+
+    </div>
+
 
 
 

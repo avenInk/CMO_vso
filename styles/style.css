@@ -1,8 +1,8 @@
 :root{
-    --primary-color: #f5f5f5;
+    --primary-color: #dddddd;
     --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     --font-size: 16px;
-    --background-color: #ffffff;
+    --background-color: #eeeeee;
     --text-color: #080808;
     --button-hover-color: #f11a90;
 
@@ -19,6 +19,7 @@
 
 
 *{
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -59,7 +60,10 @@ button{
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    margin-bottom: 4px
+    margin-bottom: 4px;
+    &:active{
+        transform: scale(0.98);
+    }
 }
 
 .login{ 
@@ -80,7 +84,7 @@ button{
 }
 
 
-body > section > form{
+div > section > form{
     display: grid;
     select{
         padding: 10px;
@@ -114,6 +118,10 @@ body > section > form{
     list-style: none;
     button{
         background-color: var(--primary-color);
+        max-width: 3.3em;
+        padding: 0px;
+        height: 2em;
+        width: 3.5em;
     };
 
     display: flex;
