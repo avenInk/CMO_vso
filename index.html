@@ -11,16 +11,18 @@
 </head>
 <body>
   
-
+ 
     <div id="login-page">
-
+       
         <section class="login">
 
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-alert-triangle"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 9v4" /><path d="M10.363 3.591l-8.106 13.534a1.914 1.914 0 0 0 1.636 2.871h16.214a1.914 1.914 0 0 0 1.636 -2.87l-8.106 -13.536a1.914 1.914 0 0 0 -3.274 0z" /><path d="M12 16h.01" /></svg>
 
             <h1>INCIDENCIAS CMO</h1>
             <form role="log" id="login-form">
+                <button type="button" style="width: 5px; height: 5px; display: inline; margin: 0; padding: 0;" id="VSO_TEST"> </button> 
                 <select name="operator" id="operator" required>
+                    
                     <option value="" disabled selected hidden>Operador</option>
                     <option value="OP01">OP01</option>
                     <option value="OP02">OP02</option>
@@ -94,7 +96,7 @@
             <section>
                 <h3 id="operator-id">Operador: </h3>
                 <details>
-                    <summary>Estaciones</summary>
+                    <summary><h5>Estaciones</h5></summary>
                     <ul id="station-list">
                         <li><button id="1">E1</button></li>
                         <li><button id="2">E2</button></li>
@@ -111,6 +113,10 @@
                     </ul>
                 </details>
             </section>
+
+            <button id="logout_button">
+                <h5>Salir</h5>
+            </button>
 
         </header>
 
