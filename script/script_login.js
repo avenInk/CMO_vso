@@ -1,6 +1,10 @@
 let fileName = null; // Se define nombre de variable global para almacenar el operador del monitorista.
+const ms = 5000 // 5,000 ms de tiempo de timeOut el tiempo de espera para ejecutar acciones de guardado/escritura y lectura en disco.
+
+
 
 function log_out() {
+    fileName = null
     const login_button = document.getElementById("sig-in-button")
     login_button.classList.remove("active-login-button");
     window.folderHandle = undefined;
@@ -40,6 +44,8 @@ async function activate_stations_buttons() {
             console.log("Se ha oprimido el boton de la estacion:", event.target.id);
             get_station_cards_by_station(window.name_stations[event.target.id]);
         }
+
+        ;
 
         event.target.disabled = false; // Habilitar el boton nuevamente despues de procesar el click
 
@@ -85,12 +91,42 @@ async function get_station_cards_by_station(cards) {
             </header>
             
             <footer>
-                <button class="incidencias_button_cards" id="incidencias_actuation_button_cards_name_${store_name}">Incidencia</button> 
+                <button class="incidencias_button_cards" id="${store_name}">Incidencia</button> 
             </footer>
             `  //agregamos el nombre de la estacion a la tarjeta
         card_container.appendChild(card)  //agregamos la tarjeta al contenedor de tarjetas
 
     });
+
+}
+
+function modal_inc_button_actuation(){
+    card_container = document.querySelector(".card-container");
+    card_container.addEventListener("click", (event) => {
+        //console.log(event.target.className)
+        if (event.target.className === "incidencias_button_cards"){
+            console.log("Se ha oprimido el boton: ", event.target.id)
+
+            
+
+            show_modal_generate_inc(event.target.id)
+
+
+
+        }
+    })
+}
+
+function show_modal_generate_inc(name_station_generate_inc){
+    
+    const global_modal = document.querySelector(".global-modal-inc")
+
+
+
+
+
+    global_modal.showModal()
+
 
 }
 
@@ -103,6 +139,14 @@ async function get_work_directory() {
         console.error("Error al seleccionar la carpeta de trabajo:", err);
     }
 }
+
+
+async function create_or_read_operator_data(fileName){
+
+
+
+}
+
 
 async function login_button_activate() {
 
@@ -125,10 +169,13 @@ async function login_button_activate() {
             fileName = `${operator_name}.json` // obtenemos el operador seleccionado del <select>
             console.log(`${fileName}`)
 
+            
+
 
             try {
                 event.preventDefault();
                 console.log("Se ha oprimido el boton de login");
+                await create_or_read_operator_data(fileName); //NOTA: Agregar una pantalla de carga que de a entender que se esta cargando/creando el archivo.
             }
             catch (err) {
                 console.error("Error al oprimir el boton de login:", err);
@@ -189,6 +236,7 @@ function main() {
 
     })
 
+    modal_inc_button_actuation() // agregamos un listener para leer cuando se oprimen los botones de las tarjetas
 
 }
 

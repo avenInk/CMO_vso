@@ -112,6 +112,7 @@
                         <li><button id="12">E12</button></li>
                     </ul>
                 </details>
+                <button id="Inc-seguimiento-button">Incidencias</button>
             </section>
 
             <button id="logout_button">
@@ -126,9 +127,78 @@
 
         </section>
 
+
+        <section class="inc_container" style="display: none;">
+
+            <article>
+                <table> 
+
+                    <thead>
+                        <tr>
+                            <th class="inc-num"> Num </th>
+                            <th class="date"> Fecha </th>
+                            <th class="id"> ID </th>
+                            <th class="name-store"> Estacion </th>
+                            <th class="inc-description"> Descripcion </th>
+                            <th class="inc-solv"> Solvencia </th> 
+                            <th class="status"> status </th> 
+                            <th class="button-update">  </th>
+                            
+                        </tr>
+                    </thead>
+
+                    <tbody class="inc-tbody">
+
+                        <tr> 
+                            <td>  1   </td>
+                            <td>  22/01/2026   </td>
+                            <td> 1921680 </td>
+                            <td>  GC TULIPANES   </td>
+                            <td>  Op13 Se visualiza falta de hielo en tumba de cerveza   </td>
+                            <td>  Se realiza llamada a tienda y nos apoyan con el hielo en la tumba de cerveza   </td>
+                            <td>  ❌   </td>
+                            <td>  <button>Actualizar</button>   </td>
+                        
+                        </tr>
+
+
+                        <tr> 
+
+                            <td>  2   </td>
+                            <td>  22/01/2026   </td>
+                            <td> 0831125 </td>
+                            <td>  ES GRAN CALAMAR   </td>
+                            <td>  Op07 Se visualizan ASES incompletos en ES   </td>
+                            <td>  Se visualizan ASES completos en ES   </td>
+                            <td>  ✅   </td>
+                            <td>  <button>Actualizar</button>   </td>
+                            
+                        </tr>
+                        
+                    </tbody>
+
+
+
+
+
+
+
+
+                </table>
+            </article>
+
+
+        </section>
+
+
+
+        
+
     </div>
 
+    <dialog class="global-modal-inc">
 
+</dialog>
 
 
 </body>
