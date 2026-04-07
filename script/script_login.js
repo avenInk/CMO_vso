@@ -121,7 +121,7 @@ function show_modal_generate_inc(name_station_generate_inc){
     
     const global_modal = document.querySelector(".global-modal-inc")
 
-
+global_modal.innerHTML= `hola` 
 
 
 
@@ -189,7 +189,7 @@ async function login_button_activate() {
                 await menu_page_enabled();
 
             }
-        })
+        }, {once : true})
 
     }
 
